@@ -11,10 +11,10 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
 		int[] bubble = new int[N];
-		for (int i = 0; i < bubble.length; i++) {
+		for (int i = bubble.length; i >=1; i--) {
 			bubble[i] = Integer.parseInt(br.readLine());
 		}
-		for (int i = 0; i < bubble.length; i++) {
+		for (int i = bubble.length-1; i >=1; i--) {
 			int temp;
 			for(int j=0; j<i; j++) {
 				if(bubble[i]>bubble[i+1]) {
