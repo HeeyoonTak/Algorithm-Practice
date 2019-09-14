@@ -14,6 +14,9 @@ public class Main {
 		for(int i=0; i<quick.length; i++) {
 			quick[i]=Integer.parseInt(br.readLine());
 		}
-		
+		//Á¤·Ä
+		for(int i=0; i<quick.length;i++) {
+			
+		}
 	}
 }
