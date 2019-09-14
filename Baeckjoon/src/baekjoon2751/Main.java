@@ -10,7 +10,18 @@ public class Main {
 		quick[j] = quick[i];
 		quick[i] = temp;
 	}
-	
+
+	static int partition(int[] quick, int first, int end) {
+		int key = quick[end];
+		int i= first-1;
+		for(int j = first; j<end; j++) {
+			if(quick[j]<key) {
+				swap(quick, i++, j);
+			}
+		}
+		swap(quick, i+1, end);
+		return i+1;
+	}
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
