@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 
 public class Main {
 	static void swap(int[] quick, int i, int j) {
-		int temp = quick[j];
-		quick[j] = quick[i];
-		quick[i] = temp;
+		int temp = quick[i];
+		quick[i] = quick[j];
+		quick[j] = temp;
 	}
 
 	static int partition(int[] quick, int first, int end) {
