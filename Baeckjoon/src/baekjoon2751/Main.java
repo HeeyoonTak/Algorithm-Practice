@@ -3,7 +3,7 @@ package baekjoon2751;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+//quick fail
 public class Main {
 	static void swap(int[] quick, int i, int j) {
 		int temp = quick[i];
