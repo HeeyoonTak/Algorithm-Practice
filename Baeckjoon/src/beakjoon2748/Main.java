@@ -15,8 +15,8 @@ public class Main {
 		array[0] = 0;
 		array[1] = 1;
 		int sum=0;
-		for(int i=2;i<array.length;i++) {
-			
+		for(int i=0;i<array.length;i++) {
+			sum+=array[i];
 		}
 	}
 
