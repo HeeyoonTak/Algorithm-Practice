@@ -11,10 +11,13 @@ public class Main {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
-		int[] array = new int[n+1];
+		int[] array = new int[n];
 		array[0] = 0;
 		array[1] = 1;
-		
+		int sum=0;
+		for(int i=2;i<array.length;i++) {
+			
+		}
 	}
 
 }
