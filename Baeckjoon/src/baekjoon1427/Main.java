@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-//sort inside
+//sort inside fail
 public class Main {
 
 	public static void main(String[] args) throws IOException {
@@ -17,18 +17,9 @@ public class Main {
 		for (int i = 0; i < sort.length; i++) {
 			sort[i] = Integer.parseInt(br.readLine());
 		}
-		int temp;
 		Arrays.sort(sort);
-		for (int i = 0; i < sort.length; i++) {
-			for (int j = 1; j < sort.length; j++) {
-				if(sort[j-1]>sort[j]) {
-					temp=sort[j];
-					sort[j]=sort[j-1];
-					sort[j-1]=temp;
-				}
-			}
-		}
-		for (int i = 0; i < sort.length; i++) {
+		
+		for (int i = sort.length-1; i >= 0; i--) {
 			System.out.println(sort[i]);
 		}
 	}
