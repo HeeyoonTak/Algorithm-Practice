@@ -14,11 +14,21 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
 		int[] sort = new int[N];
-		for(int i=0; i<sort.length; i++) {
-			sort[i]=Integer.parseInt(br.readLine());
+		for (int i = 0; i < sort.length; i++) {
+			sort[i] = Integer.parseInt(br.readLine());
 		}
+		int temp;
 		Arrays.sort(sort);
-		for(int i=sort.length-1; i>-1; i--) {
+		for (int i = 0; i < sort.length; i++) {
+			for (int j = 1; j < sort.length; j++) {
+				if(sort[j-1]>sort[j]) {
+					temp=sort[j];
+					sort[j]=sort[j-1];
+					sort[j-1]=temp;
+				}
+			}
+		}
+		for (int i = 0; i < sort.length; i++) {
 			System.out.println(sort[i]);
 		}
 	}
