@@ -18,7 +18,7 @@ public class Main {
 			sort[i]=Integer.parseInt(br.readLine());
 		}
 		Arrays.sort(sort);
-		for(int i=sort.length; i>-1; i--) {
+		for(int i=sort.length-1; i>-1; i--) {
 			System.out.println(sort[i]);
 		}
 	}
