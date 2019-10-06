@@ -14,7 +14,7 @@ public class Main {
 		int[][] location = new int[N][2];
 		for(int i=0; i<location.length; i++) {
 			location[i][0]=Integer.parseInt(br.readLine());
-			location[i][0]=Integer.parseInt(br.readLine());
+			location[i][1]=Integer.parseInt(br.readLine());
 		}
 		Arrays.sort(location, new Comparator<int[]>() {
 
