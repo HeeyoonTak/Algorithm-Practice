@@ -12,7 +12,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
 		int[][] location = new int[N][2];
-		for(int i=0; i<location.length; i++) {
+		for(int i=0; i<N; i++) {
 			location[i][0]=Integer.parseInt(br.readLine());
 			location[i][1]=Integer.parseInt(br.readLine());
 		}
@@ -28,7 +28,7 @@ public class Main {
 			}
 			
 		});
-		for(int i=0; i<location.length; i++) {
+		for(int i=0; i<N; i++) {
 			System.out.println(location[i][0] + " " + location[i][1]);
 		}
 	}
