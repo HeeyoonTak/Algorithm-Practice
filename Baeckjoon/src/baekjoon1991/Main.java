@@ -6,24 +6,73 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-
 public class Main {
 
-	class Node{
+	class Node {
 		char data;
-		Node left,right;
+		Node left, right;
+
 		public Node(char data) {
 			super();
 			this.data = data;
 		}
 	}
-	
+
+	class Tree {
+		Node root;
+
+		public void add(char data, char leftData, char rightData) {
+
+			if (root == null) {
+				if (data != ',') {
+					root = new Node(data);
+				}
+				if (leftData != '.') {
+					root.left = new Node(leftData);
+				}
+				if (rightData != '.') {
+					root.right = new Node(rightData);
+				}
+			} else
+				search(root, data, leftData, rightData);
+		}
+
+		private void search(Node root, char data, char leftData, char rightData) {
+
+			if (root == null) {
+				return;
+			} else if (root.data == data) {
+				if (leftData != '.') {
+					root.left = new Node(leftData);
+				}
+				if (leftData != '.') {
+					root.right = new Node(rightData);
+				}
+			} else {
+				search(root.left, data, leftData, rightData);
+				search(root.right, data, leftData, rightData);
+			}
+		}
+
+		public void preorder(Node root) {
+
+		}
+
+		public void inorder(Node root) {
+
+		}
+
+		public void postorder(Node root) {
+
+		}
+	}
+
 	public static void main(String[] args) throws IOException {
 
-		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
-		
-		int n= Integer.parseInt(br.readLine());
-		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int n = Integer.parseInt(br.readLine());
+
 	}
-	
+
 }
