@@ -22,9 +22,8 @@ public class Main {
 		Node root;
 
 		public void add(char data, char leftData, char rightData) {
-
 			if (root == null) {
-				if (data != ',') {
+				if (data != '.') {
 					root = new Node(data);
 				}
 				if (leftData != '.') {
@@ -38,7 +37,6 @@ public class Main {
 		}
 
 		private void search(Node root, char data, char leftData, char rightData) {
-
 			if (root == null) {
 				return;
 			} else if (root.data == data) {
@@ -55,15 +53,33 @@ public class Main {
 		}
 
 		public void preorder(Node root) {
-
+			System.out.println(root.data);
+			if (root.left != null) {
+				preorder(root.left);
+			}
+			if (root.right != null) {
+				preorder(root.right);
+			}
 		}
 
 		public void inorder(Node root) {
-
+			if (root.left != null) {
+				inorder(root.left);
+			}
+			System.out.println(root.data);
+			if (root.right != null) {
+				inorder(root.right);
+			}
 		}
 
 		public void postorder(Node root) {
-
+			if (root.left != null) {
+				postorder(root.left);
+			}
+			if (root.right != null) {
+				postorder(root.right);
+			}
+			System.out.println(root.data);
 		}
 	}
 
