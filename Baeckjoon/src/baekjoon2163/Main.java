@@ -11,6 +11,7 @@ public class Main {
 		int N = sc.nextInt();
 		int M = sc.nextInt();
 		int array[][]=new int[N][M];
+		
 	}
 
 }
