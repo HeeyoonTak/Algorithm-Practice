@@ -1,22 +1,31 @@
 package baekjoon9507;
 
+import java.io.*;
+
 //²á ÇÇº¸³ªÄ¡
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
-		
-	}
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		int T = Integer.parseInt(br.readLine());
+		long[] array = new long[68];
 
-	public int koong(int n) {
-		if (n < 2) {
-			return 1;
-		} else if (n == 2) {
-			return 2;
-		} else if (n == 3) {
-			return 4;
-		} else {
-			return koong(n - 1) + koong(n - 2) + koong(n - 3) + koong(n - 4);
+		array[0] = array[1] = 1;
+		array[2] = 2;
+		array[3] = 4;
+
+		while (T-- > 0) {
+			int n = Integer.parseInt(br.readLine());
+			if (n > 3) {
+				for (int i = 4; i <= n; i++) {
+					array[i] = array[i - 1] + array[i - 2] + array[i - 3] + array[i - 4];
+				}
+			}
+			bw.write(array[n] + "\n");
 		}
+		bw.close();
 	}
+
 }
