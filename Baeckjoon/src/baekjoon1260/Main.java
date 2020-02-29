@@ -4,13 +4,14 @@ public class Main {
 
 	static int[][] graph;
 	static boolean visited[];
-	static int N;
-	static int E;
+	static int N; //정점수 
+	static int E; //간선
 	static int startPoint;
 	
 	public static void dfs(int i) {
 		visited[i]=true;
 		System.out.println(i+" ");
+		
 		
 	}
 	public static void bfs(int i) {
