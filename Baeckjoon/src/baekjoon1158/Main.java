@@ -35,9 +35,11 @@ public class Main {
 			for (int i = 0; i < K - 1; i++) {
 				queue.offer(queue.poll());
 			}
+			//큐에 하나 남기 전까지 옮겨 담는다
 			sb.append(queue.poll() + ", ");
 		}
 
+		//마지막 하나 남은 원소 추가하고 괄호 닫기
 		sb.append(queue.poll() + ">");
 		bw.write(sb.toString() + "\n");
 		bw.flush();
