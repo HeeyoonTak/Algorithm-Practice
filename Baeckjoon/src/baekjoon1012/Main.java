@@ -35,7 +35,6 @@ public class Main {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int T = Integer.parseInt(st.nextToken());
-		
 
 		for (int j = 0; j < T; j++) {
 			st = new StringTokenizer(br.readLine());
@@ -67,24 +66,21 @@ public class Main {
 
 	public static void bfs(int x, int y) {
 		Queue<Location> q = new LinkedList<>();
-		if (farm[x][y] == 1) {
-			visited[x][y] = true;
-			q.offer(new Location(x, y));
-			while (!q.isEmpty()) {
-				Location l = q.poll();
-				for (int i = 0; i < 4; i++) {
-					int nextX = dirX[i] + l.x;
-					int nextY = dirY[i] + l.y;
-
-					if (nextX > M - 1 || nextY > N - 1 || nextX < 0 || nextY < 0)
-						continue;
-					if (visited[nextX][nextY])
-						continue;
-					if (farm[nextX][nextY] != 1)
-						continue;
-					visited[nextX][nextY] = true;
-					q.add(new Location(nextX, nextY));
-				}
+		visited[x][y] = true;
+		q.offer(new Location(x, y));
+		while (!q.isEmpty()) {
+			Location l = q.poll();
+			for (int i = 0; i < 4; i++) {
+				int nextX = dirX[i] + l.x;
+				int nextY = dirY[i] + l.y;
+				if (nextX > M - 1 || nextY > N - 1 || nextX < 0 || nextY < 0)
+					continue;
+				if (visited[nextX][nextY])
+					continue;
+				if (farm[nextX][nextY] != 1)
+					continue;
+				visited[nextX][nextY] = true;
+				q.add(new Location(nextX, nextY));
 			}
 		}
 	}
