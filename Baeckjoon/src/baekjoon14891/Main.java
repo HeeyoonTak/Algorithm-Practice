@@ -35,7 +35,7 @@ public class Main {
 					for (int i1 = who; i1 < 3; i1++) {
 						if(checkRight(i1)) {
 							changeDir(dir);
-							
+							if(wheel[i1][])
 						}
 					}
 					if(who > 0) {
@@ -54,7 +54,13 @@ public class Main {
 			dir = 1;
 		}
 	}
-	
+	public static void rotate(int who, int dir) {
+		if(dir == 1) {
+			rightRotation(who);
+		}else {
+			leftRotation(who);
+		}
+	}
 	public static void rightRotation(int who) {
 		int temp = wheel[who][7];
 		for (int i = 7; i >= 0; i--) {
@@ -71,13 +77,7 @@ public class Main {
 		wheel[who][7] = temp;
 	}
 
-	public static void rotate(int who, int dir) {
-		if(dir == 1) {
-			rightRotation(who);
-		}else {
-			leftRotation(who);
-		}
-	}
+	
 	
 	public static boolean checkRight(int who) {
 		if (wheel[who][2] == wheel[who + 1][6]) {
